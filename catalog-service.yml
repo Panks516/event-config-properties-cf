@@ -5,14 +5,14 @@ spring:
 spring:
   profiles: cloud
   redis:
-    host: ${vcap.services.catalog-redis.credentials.hostname:localhost}
+    host: ${vcap.services.catalog-redis.credentials.hostname:10.0.4.15}
     port: ${vcap.services.catalog-redis.credentials.port:6379}
 ---
 spring:
   profiles: development
   redis:
-    host: 192.168.99.100
-    port: 6379
+    host: ${vcap.services.catalog-redis.credentials.hostname:10.0.4.15}
+    port: ${vcap.services.catalog-redis.credentials.port:6379}
   datasource:
     url: jdbc:mysql://10.0.9.37:3306/service_instance_db?useSSL=false
     username: 270a9d24426a481694529229d1ebfe67
