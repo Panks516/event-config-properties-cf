@@ -20,7 +20,7 @@ security:
       client-id: acme
 eureka:
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
   client:
     registerWithEureka: true
     fetchRegistry: true
@@ -48,7 +48,7 @@ security:
       access-token-uri: ${vcap.services.online-store-web.credentials.uri:http://online-store-web.apps.apbg.apcf.io}
 eureka:
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
   client:
     registerWithEureka: true
     fetchRegistry: true
